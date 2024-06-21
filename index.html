@@ -1,115 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simple Multi-Page Website</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-        nav {
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-        }
-        .content {
-            display: none;
-            padding: 20px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-        .hidden {
-            display: none;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-            max-width: 300px;
-            margin: auto;
-        }
-        form input {
-            margin-bottom: 10px;
-            padding: 8px;
-            font-size: 16px;
-        }
-        form button {
-            padding: 10px;
-            font-size: 16px;
-            background-color: #333;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      nav {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        text-align: center;
+      }
+      nav a {
+        color: white;
+        margin: 0 15px;
+        text-decoration: none;
+      }
+      .content {
+        display: none;
+        padding: 20px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      .hidden {
+        display: none;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+        margin: auto;
+      }
+      form input {
+        margin-bottom: 10px;
+        padding: 8px;
+        font-size: 16px;
+      }
+      form button {
+        padding: 10px;
+        font-size: 16px;
+        background-color: #333;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
     </style>
-    <meta name="google-site-verification" content="xMi7FuC3nh5D0WoiHWYUlg_NKZ1R83goAcCCocj_cb4" />
-</head>
-<body>
-
+    <meta
+      name="google-site-verification"
+      content="xMi7FuC3nh5D0WoiHWYUlg_NKZ1R83goAcCCocj_cb4"
+    />
+    <script src="https://cdn.c360a.salesforce.com/beacon/c360a/df2de351-9965-46af-a4de-18fdb3c13cf0/scripts/c360a.min.js"></script>
+  </head>
+  <body>
     <nav>
-        <a href="#page1" onclick="showPage('page1')">Home</a>
-        <a href="#page2" onclick="showPage('page2')">Form</a>
+      <a href="#page1" onclick="showPage('page1')">Home</a>
+      <a href="#page2" onclick="showPage('page2')">Form</a>
     </nav>
 
     <div id="page1" class="content">
-        <h1>Welcome to Our Website</h1>
-        <img src="https://image.email.millenniumhotels.com/lib/fe2a117373640478721d72/m/1/91a7e470-3366-4f28-8373-77ab89e10923.png" alt="Placeholder Image" style="width:100%; max-width:600px;">
-        <p>Millennium Hotels and Resorts is a Hong Leong subsidiary of Singapore-listed global real estate company City Developments Limited (CDL). Headquartered in Singapore, Millennium Hotels and Resorts is Singapore’s largest homegrown operator of international hotel brands spanning 4 continents and 80 strategic destinations. With a portfolio that includes timeless masterpieces to lifestyle properties, Millennium Hotels and Resorts comprises of the brands: The Biltmore, Grand Millennium, Millennium, M Social, Studio M, M Hotel, Copthorne and Kingsgate. The group also has a specially curated selection of uniquely inimitable properties under Leng’s Collection, which has been put together by our chairman, Mr. Kwek Leng Beng.</p>
+      <h1>Welcome to Our Website</h1>
+      <img
+        src="https://image.email.millenniumhotels.com/lib/fe2a117373640478721d72/m/1/91a7e470-3366-4f28-8373-77ab89e10923.png"
+        alt="Placeholder Image"
+        style="width: 100%; max-width: 600px"
+      />
+      <p>
+        Millennium Hotels and Resorts is a Hong Leong subsidiary of
+        Singapore-listed global real estate company City Developments Limited
+        (CDL). Headquartered in Singapore, Millennium Hotels and Resorts is
+        Singapore’s largest homegrown operator of international hotel brands
+        spanning 4 continents and 80 strategic destinations. With a portfolio
+        that includes timeless masterpieces to lifestyle properties, Millennium
+        Hotels and Resorts comprises of the brands: The Biltmore, Grand
+        Millennium, Millennium, M Social, Studio M, M Hotel, Copthorne and
+        Kingsgate. The group also has a specially curated selection of uniquely
+        inimitable properties under Leng’s Collection, which has been put
+        together by our chairman, Mr. Kwek Leng Beng.
+      </p>
     </div>
 
     <div id="page2" class="content hidden">
-        <form id="form1" onsubmit="showFormPage2(event)">
-            <label for="firstName">First Name:</label>
-            <input type="text" id="firstName" name="firstName" required>
-            
-            <label for="lastName">Last Name:</label>
-            <input type="text" id="lastName" name="lastName" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <button type="submit">Next</button>
-        </form>
+      <form id="form1" onsubmit="showFormPage2(event)">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required />
 
-        <form id="form2" class="hidden" onsubmit="submitForm(event)">
-            <button type="submit">Submit</button>
-        </form>
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <button type="submit">Next</button>
+      </form>
+
+      <form id="form2" class="hidden" onsubmit="submitForm(event)">
+        <button type="submit">Submit</button>
+      </form>
     </div>
 
     <script>
-        function showPage(pageId) {
-            document.querySelectorAll('.content').forEach(page => {
-                page.classList.add('hidden');
-            });
-            document.getElementById(pageId).classList.remove('hidden');
-        }
+      function showPage(pageId) {
+        document.querySelectorAll(".content").forEach((page) => {
+          page.classList.add("hidden");
+        });
+        document.getElementById(pageId).classList.remove("hidden");
+      }
 
-        function showFormPage2(event) {
-            event.preventDefault();
-            document.getElementById('form1').classList.add('hidden');
-            document.getElementById('form2').classList.remove('hidden');
-        }
+      function showFormPage2(event) {
+        event.preventDefault();
+        document.getElementById("form1").classList.add("hidden");
+        document.getElementById("form2").classList.remove("hidden");
+      }
 
-        function submitForm(event) {
-            event.preventDefault();
-            window.open('https://www.millenniumhotels.com/', '_blank');
-        }
+      function submitForm(event) {
+        event.preventDefault();
+        window.open("https://www.millenniumhotels.com/", "_blank");
+      }
     </script>
-</body>
+  </body>
 </html>
-
